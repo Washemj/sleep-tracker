@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sleep Tracker</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <h1 id="title">Sleep Tracker</h1>
+  <!-- <form action="/passchange" method="post"> -->
+  <section class="container2">
+    <div class="info">
+      <p>You mentioned the other day that you liked how I was focused on health and that you wanted to learn a little, so ta-da! This is what I thought of making haha. I'm of the belief that sleep is pretty much at the top of things needed to stay healthy, and I can see how rough it is for you with your work sched and maybe anxiety too? duno but wanted to see if you could use the info to improve your sleep.</p>
+      <p>Soooo according to the podcast I sent you, the best way to mess with our sleeping pattern (i.e. shift our circadian clock) is to know when our temperature minimum occurs and to either view bright light in the few hours before it to make it later the next day, or a few hours after to make it earlier. </p>
+      <p>For example, if you were going from a normal morning shift week to a night shift week, you would want to start making your wake up time much later (assuming you sleep most after your shift). So if your average wake up time was 6am, your temp min would be at 4-430am. So you would want to view bright light before that time (sometime between 12-4am) to make your body want to sleep in later the next day. Hopefully that should shift it an hour or two, and so you want to keep doing that until you shift it to the time you want. Will probably require some fiddling.</p>
+      <p>As in the example, your temperature minimum occurs about 90-120 minutes before your average wake up time but to make it easy for you I've made this calculator on the right to tell you your temperature min. You just have to remember the times you woke up at for the past 5 days and chuck em in :/ (So start noting it down!)</p>
+      <p>Anyway here's the <a href="https://www.youtube.com/watch?v=NAATB55oxeQ">link to the podcast</a>, as he explains it better.</p>
+    </div>
+    <div class="calc">
+      <form name="myForm" onsubmit="return false">
+        <p>Input in 24 time (hh:mm)</p>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="today" name="today" placeholder="Today's wake up time" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="yesterday" name="yesterday" placeholder="Yesterday's wake up time" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="1dbyesterday" name="1dbyesterday" placeholder="2 days ago wake up time" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="2dbyesterday" name="2dbyesterday" placeholder="3 days ago wake up time" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="3dbyesterday" name="3dbyesterday" placeholder="4 days ago wake up time" type="text">
+        </div>
+        <button id="submit" class="btn btn-primary">Calculate Temperature Min</button>
+      </form>
+      <div id="result" class="mb-3">
+        <h3 class="padding">Your temperature minimum is at </h3>
+        <button id="recalc" class="btn btn-primary">Recalculate</button>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    Sleep well!
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
